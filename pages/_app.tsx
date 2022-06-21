@@ -6,7 +6,7 @@ import "../styles/Post.scss";
 import "../styles/Header.scss";
 import "../styles/createpost.scss";
 export const client = new ApolloClient({
-  uri: "http://localhost:4000",
+  uri: "https://blogappsimple.herokuapp.com/",
   cache: new InMemoryCache(),
 });
 function MyApp({ Component, pageProps }: AppProps) {
