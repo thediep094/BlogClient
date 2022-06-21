@@ -40,7 +40,7 @@ const Post = (props: { post: IPost }) => {
           <p className="text">{props.post.content}</p>
         </div>
       </div>
-      <div
+      {/* <div
         className="Author_info"
         style={{
           transform: on ? "translateX(0)" : "translateX(1000px)",
@@ -58,7 +58,7 @@ const Post = (props: { post: IPost }) => {
             <div>{post.name}</div>
           ))}
         </span>
-      </div>
+      </div> */}
     </div>
   );
 };

@@ -4,6 +4,7 @@ import { getAllPosts } from "../graphql/queries";
 import Post from "../components/Post";
 import Header from "../components/Header";
 import { client } from "./_app";
+import Link from "next/link";
 
 interface IAuthor {
   id: string;
@@ -28,7 +29,11 @@ const Home: NextPage = ({ data }: any) => {
       <Header />
       <div className="Home__container">
         {data?.posts.map((post: IPost) => (
-          <Post key={post.id} post={post} />
+          <Link href={post.id}>
+            <a>
+              <Post key={post.id} post={post} />
+            </a>
+          </Link>
         ))}
       </div>
     </div>
