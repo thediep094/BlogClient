@@ -51,7 +51,10 @@
                 font-size: 20px;
                 color: #333;
                 margin: 10px 10px 0 10px;
-
+                -webkit-line-clamp: 4;
+                -webkit-box-orient: vertical;
+                display: -webkit-box;
+                overflow: hidden;
             }
         }
     }
