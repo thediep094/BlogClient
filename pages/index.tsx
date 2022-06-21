@@ -28,13 +28,16 @@ const Home: NextPage = ({ data }: any) => {
     <div className="Home">
       <Header />
       <div className="Home__container">
-        {data?.posts.map((post: IPost) => (
-          <Link href={post.id}>
-            <a>
-              <Post key={post.id} post={post} />
-            </a>
-          </Link>
-        ))}
+       {data?.posts
+          .slice(0)
+          .reverse()
+          .map((post: IPost) => (
+            <Link href={post.id}>
+              <a>
+                <Post key={post.id} post={post} />
+              </a>
+            </Link>
+          ))}
       </div>
     </div>
   );
