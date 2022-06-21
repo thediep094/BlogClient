@@ -19,4 +19,20 @@ const getAllPosts = gql`
 	}
 `
 
-export {getAllPosts}
+const getPostById =  gql`
+query Query($postId: ID!) {
+  post(id: $postId) {
+    name
+    id
+    content
+    genre
+    author {
+      id
+      name
+      age
+    }
+  }
+}
+`
+
+export {getAllPosts,getPostById}
