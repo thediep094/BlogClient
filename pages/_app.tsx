@@ -5,6 +5,7 @@ import "../styles/Home.scss";
 import "../styles/Post.scss";
 import "../styles/Header.scss";
 import "../styles/createpost.scss";
+import "../styles/Slug.scss";
 export const client = new ApolloClient({
   uri: "https://blogappsimple.herokuapp.com/",
   cache: new InMemoryCache(),
@@ -18,3 +19,4 @@ function MyApp({ Component, pageProps }: AppProps) {
 }
 
 export default MyApp;
+//https://blogappsimple.herokuapp.com/
